@@ -15,8 +15,9 @@ timeout {{ icingadb_redis_timeout }}
 tcp-keepalive {{ icingadb_redis_tcp_keepalive }}
 supervised {{ icingadb_redis_supervised }}
 pidfile {{ icingadb_redis_pidfile }}
-loglevel {{ icingadb_redis_loglevel }}
-logfile "{{ icingadb_redis_logfile }}"
+# log breaks with permission denied - quickfix: disable logfile
+#loglevel {{ icingadb_redis_loglevel }}
+#logfile "{{ icingadb_redis_logfile }}"
 # syslog-enabled no
 # syslog-ident redis
 # syslog-facility local0
